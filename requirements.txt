@@ -1,6 +1,6 @@
 streamlit
 transformers
 torch
+python-dotenv
 safetensors
 openai
-python-dotenv
