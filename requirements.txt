@@ -1,6 +1,6 @@
-streamlit
-transformers
-torch
-python-dotenv
-safetensors
-openai
+streamlit==1.40.2
+transformers==4.47.0
+torch==2.5.1
+python-dotenv==1.0.1
+safetensors==0.4.5
+openai==1.57.0
