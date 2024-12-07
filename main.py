@@ -8,11 +8,12 @@ from dotenv import load_dotenv
 
 import json
 
+with open("config.json") as f:
+    config = json.load(f)
 
 
+api_key = config["OPENAI_API_KEY"]
 
-#api_key = config["OPENAI_API_KEY"]
-api_key = stl.secrets["OPENAI_API_KEY"]
 
 
 
@@ -23,7 +24,7 @@ def explain_reason(news, label):
     justification =  openai.chat.completions.create(
         model="gpt-4o-mini", 
         messages = [
-    {"role": "system", "content": "You are a part of a fake news detection application. Another model besides you determines whether or not a piece of news is fake or not. It automatically assigns a label to that piece of news, real or fake. Your job is to explain in detail that particular label is assigned to a piece of news. Even if logically, it may not make sense for a piece of news to have a particular label, justify why it may be of that label. The explanation must to be detailed, but have a simple vocabulary as the target audience of the application is those who do are not literate in news linguo, basically the average person. Furthermore, if it is deemed fake, please recommend alternative articles regarding the news' subject matter that may provide real news regarding the matter. Provide the links to these articles and make sure they actually work."},
+    {"role": "system", "content": "You are a part of a fake news detection application. Another model besides you determines whether or not a piece of news is fake or not. It automatically assigns a label to that piece of news, real or fake. Your job is to explain in detail that particular label is assigned to a piece of news. The explanation must to be detailed, but have a simple vocabulary as the target audience of the application is those who do are not literate in news linguo, basically the average person. Furthermore, if it is deemed fake, please recommend alternative articles regarding the news' subject matter that may provide real news regarding the matter. Provide the links to these articles and make sure they actually work."},
     {"role": "user", "content": f"Why is '{news}' {label}"},
     ]
     )
@@ -31,10 +32,7 @@ def explain_reason(news, label):
 
 stl.title("FauxBuster")
 
-#safetensors_file = "bert_fake_news_model\model.safetensors"
-#state_dict = load_file(safetensors_file)
 
-#save_file(state_dict, "bert_fake_news_model\pytorch_model.bin")
 
 
 
