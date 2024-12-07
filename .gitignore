@@ -1,5 +1,5 @@
 # Sensitive files
-config.json
+./config.json
 .secrets.toml
 
 # Model files and checkpoints

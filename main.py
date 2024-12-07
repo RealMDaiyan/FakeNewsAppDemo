@@ -8,8 +8,7 @@ from dotenv import load_dotenv
 
 import json
 
-with open("config.json") as f:
-    config = json.load(f)
+
 
 
 #api_key = config["OPENAI_API_KEY"]
