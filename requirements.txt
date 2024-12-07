@@ -4,4 +4,4 @@ torch==2.5.1
 python-dotenv==1.0.1
 safetensors==0.4.5
 openai==1.57.0
-tensorflow
+
