@@ -38,7 +38,7 @@ stl.title("FauxBuster")
 
 
 
-model = AutoModelForSequenceClassification.from_pretrained("bert_fake_news_model", from_tf=True)
+model = AutoModelForSequenceClassification.from_pretrained("bert_fake_news_model")
 tokenizer = AutoTokenizer.from_pretrained("bert-base-uncased")
 tokenizer.save_pretrained("bert_fake_news_model")
 
