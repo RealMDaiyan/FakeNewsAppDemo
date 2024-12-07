@@ -12,8 +12,8 @@ with open("config.json") as f:
     config = json.load(f)
 
 
-api_key = config["OPENAI_API_KEY"]
-
+#api_key = config["OPENAI_API_KEY"]
+api_key = stl.secrets["OPENAI_API_KEY"]
 
 
 
