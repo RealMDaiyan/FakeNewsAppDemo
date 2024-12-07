@@ -1,22 +1,24 @@
+# Sensitive files
+config.json
+.secrets.toml
 
-.env
-.venv
-venv
+# Model files and checkpoints
+bert_fake_news_model/*.bin
+bert_fake_news_model/*.safetensors
+bert_fake_news_model/*.ckpt
+bert_fake_news_model/checkpoint-*/
 
-
-
-
-
+# Python-specific files
 *.pyc
 *.pyo
 __pycache__/
 
+# Virtual environments
+.venv/
+venv/
 
+# OS-specific files
 .DS_Store
 Thumbs.db
-config.json
 
-bert_fake_news_model/checkpoint-*
-bert_fake_news_model/*
-!bert_fake_news_model/pytorch_model.bin
-!bert_fake_news_model/tokenizer.json
+# Other temporary files
